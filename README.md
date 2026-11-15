@@ -60,5 +60,30 @@ A cloud-agnostic, model-agnostic collection of **37 production AI engineering sk
 - [`skills/untrusted-ingestion-sanitizer.SKILL.md`](skills/untrusted-ingestion-sanitizer.SKILL.md)
 - [`skills/web-a11y-debugging.SKILL.md`](skills/web-a11y-debugging.SKILL.md)
 
+
 ---
-*Researched, architected, and field-tested by **Anat Lerner** (@AnatAdapaAi).*
+
+## Acknowledgments & Community Inspiration
+
+Many of the architectural patterns, agent guardrails, and operational skills in this repository were inspired by—and distilled from—recommendations, engineering deep-dives, and transcripts from podcasts, meetups, and talks I love listening to and learning from. Huge credit and gratitude to the builders, founders, and researchers who generously share their playbooks with the community:
+
+- **AI-Native Startup & Builder Podcasts:**
+  - **Y Combinator ([@ycombinator](https://github.com/ycombinator) — *The Light Cone*):** **Garry Tan** ([@garrytan](https://github.com/garrytan)), **Diana Hu** ([@sdianahu](https://github.com/sdianahu)), and **Jared Friedman** (*"How to Make Claude Code Your AI Engineering Team"*, *"How To Build A Company With AI From The Ground Up"*, *"Inside YC's AI Playbook"*, *"The AI Agent Economy Is Here"*).
+  - **Dan Shipper** ([@danshipper](https://github.com/danshipper) / [@every-inc](https://github.com/every-inc) — *"The AI Paradox: More Automation, More Humans, More Work"*).
+  - **Jack Dorsey** ([@jack](https://github.com/jack)) & the builders behind *"How to Build a Self-Improving Company with AI"*.
+  - **Howie Liu** (*CEO, Airtable* [@Airtable](https://github.com/Airtable) — *"What the Top 1% Do With AI"*).
+  - **Daniel Priestley** (*The 7-11-4 Trust & Distribution Framework*).
+  - **Sairish** (*Founder, Hansadis* — *"How to Build an Internal AI Agent That Evolves Itself"*).
+  - **The Tokenmaxxing & Agentic Coding Creator Community:** Creators behind *"Tokenmaxxing: How Top Builders Use AI To Do The Work Of 400 Engineers"*, *"I Tried 100 Skills — These 6 Are The Best"*, *"You're Not Behind (Yet): Learn AI Agents in 13 Minutes"*, and *"The New Way To Build A Startup"*.
+- **Israeli Engineering, Cloud & Venture Community:**
+  - **monday.com AI Engineering Team ([@mondaycom](https://github.com/mondaycom)):** **Netanel**, **Tomer Brook**, and **Guy Hadass** (for sharing their candid real-world lessons on building *Atlas*, PR-Guardrails, cross-session agent memory, and per-builder token budgeting).
+  - **Amit Gruber Hazani** (*Google Cloud Tel Aviv* — *Agentic Coding*).
+  - **Alon Schindel** (*VP of AI & Threat Research, Wiz* [@wiz-sec](https://github.com/wiz-sec) / *Google* — *The 2026 AI Threat Landscape*).
+  - **Tom Even** (*Automate-AI / Agents & Me*) and **Guy & Amit at Fusion VC** (for organizing community builder sessions with Google Israel).
+  - **Roi** (*MongoDB* [@mongodb](https://github.com/mongodb)) & the speakers at **LangTalks 2026 (*Agents in Production*)**.
+- **Google Cloud ([@GoogleCloudPlatform](https://github.com/GoogleCloudPlatform)), Workspace & Google DeepMind ([@google-deepmind](https://github.com/google-deepmind)) Speakers & Engineers:**
+  - **Sundar Pichai** (*Gemini at Work*), **Mark Lohmeyer**, **Yuli Kwon Kim**, **Francis D'Souza**, and **Ricky Robinette**.
+  - **Agent Platform, Observability, Data & Security Teams:** **Rami Shalom** (*Google Cloud Observability*) & **Jason Lopatecki** (*Arize AI* [@Arize-ai](https://github.com/Arize-ai)), **Aman Khan & Lavi** (*Agent Platform & Governance*), **Ryan Ismert & Elia** (with **Praveen** at Comcast & **Tejuel** at Palo Alto Networks [@PaloAltoNetworks](https://github.com/PaloAltoNetworks)), **Deepak Kalakuri & Mark Church** (with **Scott** at Replit [@replit](https://github.com/replit)), **Ali Bek & Maria** (*Booking.com* [@bookingcom](https://github.com/bookingcom)), **Chetna Sehgal** (*Accenture*), **Casey McNamara** (*Capgemini*), **Ravi Shah & Sean Liu** (*Agent Identity*), **Chaitanya ("Chai") & Lu Yang** (*Dataplex / Knowledge Catalog*), **Sujata Mandava & Ravi Murthy** (*AlloyDB*), **Neeraja Rantisinthala, Thomas Talleyers & Fernando Croceri** (*BigQuery & MercadoLibre* [@mercadolibre](https://github.com/mercadolibre)), **Sajil Aggarwal** (*GCE/GKE*), **Jürgen Kutscher & Nick Bennett** (*Mandiant*), **Himanshu Mehra**, **Fatima**, **Sita**, **Luke Cambry & Ashish Gupta**, and the **Google DeepMind *AlphaEvolve* Research Team** ([@google-deepmind](https://github.com/google-deepmind)).
+
+---
+*Curated, architected, and field-tested in production by **Anat Lerner** ([@AnatAdapaAi](https://github.com/AnatAdapaAi)).*
