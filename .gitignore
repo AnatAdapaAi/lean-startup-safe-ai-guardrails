@@ -1,0 +1,22 @@
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python & Environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# GCP & Local Credentials (Never commit)
+*credentials*.json
+*service-account*.json
+*.pem
+*.key
+.gemini/
