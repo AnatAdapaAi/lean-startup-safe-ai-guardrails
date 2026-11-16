@@ -48,3 +48,20 @@ currency fields in configs.
    estimate), chunk long files (never silently truncate), and require single-item PRs with explicit human
    (`ANAT`) approval for deletions, billing, or IAM changes.
 
+## AlloyDB Express (Scale-to-Zero Cloud) & AlloyDB Omni (Zero-Cost Local Container)
+To maximize FinOps efficiency for CI pipelines, prototypes, and agent sandboxes, we default to **AlloyDB
+Express** in `us-central1` or **AlloyDB Omni** in local/ephemeral containers before provisioning standard
+always-on AlloyDB clusters:
+- **AlloyDB Express Scale-to-Zero Architecture:** Uses 1 CU (1 vCPU, 4 GB RAM) or 2 CU (2 vCPU, 8 GB RAM) on
+  PostgreSQL 18 with up to 20 GB storage and 200 max connections. Compute automatically scales down to zero
+  when idle (with a ~20-second wake latency) and includes a monthly free tier of 50 CU-hours and 2 GB storage
+  for 12 months.
+- **Idle-Wake FinOps Guardrail:** We never attach continuous keep-alive pingers or aggressive health-check
+  polling to AlloyDB Express instances. Keeping an Express instance artificially awake 24/7 burns ~720
+  CU-hours/month (~$82-$88/month) instead of ~$1.15/month for on-demand burst usage.
+- **One-Way Upgrade Gate (`ANAT` Approval Required):** Upgrading from AlloyDB Express to standard AlloyDB is
+  irreversible and switches billing to always-provisioned hourly compute. We require explicit human approval
+  before executing any cluster promotion.
+- **Automated GCS Snapshot Discipline:** Because AlloyDB Express omits automated backups and SLA coverage, we
+  schedule lightweight `pg_dump` exports directly to our regional `us-central1` Cloud Storage bucket prior to
+  schema mutations.
