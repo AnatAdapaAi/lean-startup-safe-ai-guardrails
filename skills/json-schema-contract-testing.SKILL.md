@@ -15,7 +15,7 @@ Validates producer/consumer JSON contracts across all 20 teams via `gs://LeanSta
 ## 2. Execution & Implementation Rules
 - Cheapest Execution Path (Mandatory): Validates producer/consumer JSON contracts across all 20 teams via
   `gs://LeanStartupOps-agent-tasks/`.
-- Never provision always-on instances in `your-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
+- Never provision always-on instances in `our-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
   (`python:3.12-slim`) for all bootstrap and verification workloads.
 - Consult `gs://LeanStartupOps-negative-knowledge/` before enabling any managed cloud API at customer scale.
 

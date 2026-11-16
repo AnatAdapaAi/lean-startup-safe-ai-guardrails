@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "scale_adapted_zero_idle"
 assigned_teams: "all-applicable-teams"
-description: "Executes Rust test suites with mandatory `cargo test --nocapture` so all empirical metrics are logged to `gs://LeanStartupOps-ci-logs`."
+description: >-
+  Executes Rust test suites with mandatory `cargo test --nocapture` so all empirical metrics are
+  logged to `gs://LeanStartupOps-ci-logs`.
 ---
 
 # LeanStartupOps-rust-cargo-test-harness
@@ -16,7 +18,7 @@ Executes Rust test suites with mandatory `cargo test --nocapture` so all empiric
 ## 2. Execution & Implementation Rules
 - Cheapest Execution Path (Mandatory): Executes Rust test suites with mandatory `cargo test --nocapture` so
   all empirical metrics are logged to `gs://LeanStartupOps-ci-logs`.
-- Never provision always-on instances in `your-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
+- Never provision always-on instances in `our-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
   (`python:3.12-slim`) for all bootstrap and verification workloads.
 - Consult `gs://LeanStartupOps-negative-knowledge/` before enabling any managed cloud API at customer scale.
 

@@ -4,7 +4,10 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-06-legal,team-10-research"
-description: "Search for scientific papers, preprints, and publications on arXiv. Extract metadata, abstracts, and download full-text PDFs or HTML versions of papers for prior-art and technical proof verification."
+description: >-
+  Search for scientific papers, preprints, and publications on arXiv. Extract metadata,
+  abstracts, and download full-text PDFs or HTML versions of papers for prior-art and technical
+  proof verification.
 ---
 
 # LeanStartupOps-literature-search-arxiv

@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "scale_adapted_zero_idle"
 assigned_teams: "all-applicable-teams"
-description: "Validates mathematical, physics, and acoustic session signal-processing formulas in `python:3.12-slim` with zero session retention."
+description: >-
+  Validates mathematical, physics, and acoustic session signal-processing formulas in
+  `python:3.12-slim` with zero session retention.
 ---
 
 # LeanStartupOps-python-scipy-signal-processing
@@ -16,7 +18,7 @@ zero session retention.
 ## 2. Execution & Implementation Rules
 - Cheapest Execution Path (Mandatory): Validates mathematical, physics, and acoustic session
   signal-processing formulas in `python:3.12-slim` with zero session retention.
-- Never provision always-on instances in `your-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
+- Never provision always-on instances in `our-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
   (`python:3.12-slim`) for all bootstrap and verification workloads.
 - Consult `gs://LeanStartupOps-negative-knowledge/` before enabling any managed cloud API at customer scale.
 

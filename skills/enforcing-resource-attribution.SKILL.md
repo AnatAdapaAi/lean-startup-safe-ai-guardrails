@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-08-finops"
-description: "Enforces resource labels (`team`, `wave`, `env=development`) on Cloud Run Jobs and GCS buckets for token and usage attribution."
+description: >-
+  Enforces resource labels (`team`, `wave`, `env=development`) on Cloud Run Jobs and GCS buckets
+  for token and usage attribution.
 ---
 
 # LeanStartupOps-enforcing-resource-attribution

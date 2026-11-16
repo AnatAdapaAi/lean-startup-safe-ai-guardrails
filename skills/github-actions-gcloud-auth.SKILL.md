@@ -10,12 +10,12 @@ description: "Configures keyless GitHub Actions / Cloud Build triggers authentic
 # LeanStartupOps-github-actions-gcloud-auth
 
 ## 1. Purpose & Technical Scope
-Configures keyless GitHub Actions / Cloud Build triggers authenticating to `your-gcp-project-id`.
+Configures keyless GitHub Actions / Cloud Build triggers authenticating to `our-gcp-project-id`.
 
 ## 2. Execution & Implementation Rules
 - Cheapest Execution Path (Mandatory): Configures keyless GitHub Actions / Cloud Build triggers
-  authenticating to `your-gcp-project-id`.
-- Never provision always-on instances in `your-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
+  authenticating to `our-gcp-project-id`.
+- Never provision always-on instances in `our-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
   (`python:3.12-slim`) for all bootstrap and verification workloads.
 - Consult `gs://LeanStartupOps-negative-knowledge/` before enabling any managed cloud API at customer scale.
 

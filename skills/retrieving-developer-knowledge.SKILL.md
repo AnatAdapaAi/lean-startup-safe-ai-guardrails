@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-02-code,team-13-enablement"
-description: "Searches, retrieves, and synthesizes official Google developer documentation across Google Cloud, Gemini, Android, Chrome, Web, Flutter, Go, and Firebase."
+description: >-
+  Searches, retrieves, and synthesizes official Google developer documentation across Google
+  Cloud, Gemini, Android, Chrome, Web, Flutter, Go, and Firebase.
 ---
 
 # LeanStartupOps-retrieving-developer-knowledge

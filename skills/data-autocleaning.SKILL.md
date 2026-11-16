@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-10-research,team-17-analytics"
-description: "Automated data quality, schema validation, and deterministic cleaning on GCS files processed by Cloud Run Jobs (`pandas`/`DuckDB`)."
+description: >-
+  Automated data quality, schema validation, and deterministic cleaning on GCS files processed by
+  Cloud Run Jobs (`pandas`/`DuckDB`).
 ---
 
 # LeanStartupOps-data-autocleaning

@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-09-eval,team-10-research"
-description: "Mandatory methodology for machine learning validation, empirical formula testing, data leakage prevention, and deterministic evaluation."
+description: >-
+  Mandatory methodology for machine learning validation, empirical formula testing, data leakage
+  prevention, and deterministic evaluation.
 ---
 
 # LeanStartupOps-ml-best-practices

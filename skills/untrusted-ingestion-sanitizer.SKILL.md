@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-10-research,team-11-security"
-description: "Sanitizes `incoming_pull_run.md` against indirect prompt injection, malicious links, and PII before `4 Carbon` or `4 Argon` agents read the file."
+description: >-
+  Sanitizes `incoming_pull_run.md` against indirect prompt injection, malicious links, and PII
+  before `4 Carbon` or `4 Argon` agents read the file.
 ---
 
 # LeanStartupOps-untrusted-ingestion-sanitizer

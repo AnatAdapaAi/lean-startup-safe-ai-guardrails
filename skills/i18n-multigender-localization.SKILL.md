@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-02-code,team-04-marketing,team-13-enablement,team-15-ux"
-description: "Enforces `en:` first key ordering across all code/schemas and pairs English grammatical instructions with native target-language examples (including 4-gender Hebrew morphology)."
+description: >-
+  Enforces `en:` first key ordering across all code/schemas and pairs English grammatical
+  instructions with native target-language examples (including 4-gender Hebrew morphology).
 ---
 
 # LeanStartupOps-i18n-multigender-localization

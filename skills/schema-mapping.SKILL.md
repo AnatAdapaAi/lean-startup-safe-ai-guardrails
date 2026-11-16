@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-02-code,team-17-analytics"
-description: "Analyzes, maps, and documents transformations between source and target schemas for Parquets/JSONL in GCS and runtime payload validation."
+description: >-
+  Analyzes, maps, and documents transformations between source and target schemas for
+  Parquets/JSONL in GCS and runtime payload validation.
 ---
 
 # LeanStartupOps-schema-mapping

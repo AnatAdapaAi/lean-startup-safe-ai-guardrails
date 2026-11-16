@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-02-code,team-11-security"
-description: "Clones internal skill repositories, strips all `LeanStartupOps` project semantics and internal bucket paths, and prepares clean open-source packages."
+description: >-
+  Clones internal skill repositories, strips all `LeanStartupOps` project semantics and internal
+  bucket paths, and prepares clean open-source packages.
 ---
 
 # LeanStartupOps-public-repo-sanitizer

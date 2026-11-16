@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-17-analytics,team-10-research"
-description: "Guides local or Colab Jupyter notebooks for analysis and visualization against data in GCS via DuckDB/pandas, productionized as Cloud Run Jobs (zero always-on Vertex AI Workbench)."
+description: >-
+  Guides local or Colab Jupyter notebooks for analysis and visualization against data in GCS via
+  DuckDB/pandas, productionized as Cloud Run Jobs (zero always-on Vertex AI Workbench).
 ---
 
 # LeanStartupOps-notebook-guidance

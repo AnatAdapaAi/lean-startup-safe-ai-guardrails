@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "scale_adapted_zero_idle"
 assigned_teams: "all-applicable-teams"
-description: "Scans Python ASTs in CI to block hardcoded prices/USD fields, forbidden model strings, and raw patent formulas."
+description: >-
+  Scans Python ASTs in CI to block hardcoded prices/USD fields, forbidden model strings, and raw
+  patent formulas.
 ---
 
 # LeanStartupOps-python-ast-static-scanner
@@ -15,7 +17,7 @@ Scans Python ASTs in CI to block hardcoded prices/USD fields, forbidden model st
 ## 2. Execution & Implementation Rules
 - Cheapest Execution Path (Mandatory): Scans Python ASTs in CI to block hardcoded prices/USD fields,
   forbidden model strings, and raw patent formulas.
-- Never provision always-on instances in `your-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
+- Never provision always-on instances in `our-gcp-project-id`. Use GCS Parquet + DuckDB + Cloud Run Jobs
   (`python:3.12-slim`) for all bootstrap and verification workloads.
 - Consult `gs://LeanStartupOps-negative-knowledge/` before enabling any managed cloud API at customer scale.
 

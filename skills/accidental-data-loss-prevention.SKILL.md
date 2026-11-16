@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-00-pct,team-11-security,team-10-research"
-description: "Enforces mandatory human approval gates before any deletion, destructive overwrite, or irreversible state change."
+description: >-
+  Enforces mandatory human approval gates before any deletion, destructive overwrite, or
+  irreversible state change.
 ---
 
 # LeanStartupOps-accidental-data-loss-prevention

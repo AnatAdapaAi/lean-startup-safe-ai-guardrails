@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-09-eval,team-08-finops"
-description: "Emits OpenTelemetry (OTel) agent spans (model ID, token counts, latency, Argon reviewer verdict) to GCS JSONL/Parquet with zero always-on collectors."
+description: >-
+  Emits OpenTelemetry (OTel) agent spans (model ID, token counts, latency, Argon reviewer
+  verdict) to GCS JSONL/Parquet with zero always-on collectors.
 ---
 
 # LeanStartupOps-agent-otel-observability

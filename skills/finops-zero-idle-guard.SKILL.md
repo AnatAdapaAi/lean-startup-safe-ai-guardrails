@@ -4,7 +4,9 @@ version: "2.0.0"
 license: Apache-2.0
 tier: "bootstrap"
 assigned_teams: "team-08-finops,team-11-security"
-description: "Enforces zero-idle-cost infrastructure across all repos and CI builds, blocking always-on compute and currency fields in configs."
+description: >-
+  Enforces zero-idle-cost infrastructure across all repos and CI builds, blocking always-on
+  compute and currency fields in configs.
 ---
 
 # LeanStartupOps-finops-zero-idle-guard
