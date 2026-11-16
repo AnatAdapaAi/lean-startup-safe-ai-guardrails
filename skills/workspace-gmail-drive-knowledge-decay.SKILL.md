@@ -77,3 +77,20 @@ To fix superficial folder-only organization and rehabilitate decayed research wi
 3. **Audited Physical File Placement (`gemini-4-argon`):** Execute the verified Drive file moves (`files.update`
    with `addParents`/`removeParents`) so every file resides in its canonical team folder with an active workflow
    index.
+
+## 7. Unified Knowledge Index & Bidirectional Drive-GCS Routing Contract
+We maintain a single source of truth at
+`gs://enterprise-agent-staging-bucket/governance/UNIFIED_KNOWLEDGE_INDEX.json` so every agent
+across our 22 teams knows exactly where files reside and where new outputs belong:
+- **Zero Unmapped Drive Writes:** Agents are strictly forbidden from creating ad-hoc folders or saving files to
+  the Drive root directory. Every output must target either the team's canonical `gcs_prefix` or its mapped
+  `drive_folder` in `UNIFIED_KNOWLEDGE_INDEX.json`.
+- **When to Move from Drive to GCS (`Drive -> GCS`):** Superseded research drafts, historical correspondence
+  outside `PROTECTED_EXTERNAL_SHARED_FOLDER_ID`, raw invoice attachments, and large dataset exports are archived to
+  GCS and marked `SEALED_ARCHIVE` in the index so agents never waste tokens re-reading them.
+- **When to Promote from GCS to Drive (`GCS -> Drive`):** Agent logs, JSONL intelligence feeds, and intermediate
+  drafts remain strictly in GCS. Only final reports and `_DELTA_2026_UPDATE.md` briefs that pass Stage-3
+  `gemini-4-argon` audit are exported to the canonical team folder in Google Drive.
+- **SHA-256 Read-Once Deduplication:** Each scanned Drive file or Gmail thread is recorded in
+  `indexed_assets_ledger` with its SHA-256 hash, team owner, `rot_status` (`ACTIVE_CANONICAL`,
+  `NEEDS_DELTA_REFRESH`, or `SEALED_ARCHIVE`), and concise summary so agents query the index at zero LLM cost.
