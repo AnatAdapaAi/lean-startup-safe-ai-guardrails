@@ -47,3 +47,15 @@ Carbon` or `4 Argon` agents read the file.
    estimate), chunk long files (never silently truncate), and require single-item PRs with explicit human
    (`ANAT`) approval for deletions, billing, or IAM changes.
 
+## Model Armor Inline Integration & Placement Strategy
+We pair our structural ingestion sanitizer with Google Cloud **Model Armor** (`model-armor-inline-defense`)
+at our external ingestion boundaries:
+- **Attach to Tier-1 Untrusted Readers:** Bind Model Armor inline templates to agents ingesting external emails,
+  calendar invites, shared documents, web pages, and third-party MCP responses to block indirect prompt
+  injection and malicious URLs automatically.
+- **Attach SDP Redaction to Tier-2 Legal & Finance Agents:** Enable Sensitive Data Protection (PII redaction)
+  on compliance and financial workflows at zero extra per-token surcharge ($0.10/1M tokens after the 2M/month
+  free tier).
+- **Bypass on Tier-3 Internal Code & Security Agents:** Keep internal Rust/Python engineering and security
+  evaluation agents free of aggressive content filters to eliminate false positives on source code and save
+  inspection tokens.

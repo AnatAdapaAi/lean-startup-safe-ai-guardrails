@@ -110,4 +110,26 @@ founders, and researchers who generously share their playbooks with the communit
  - **Alexander Novikov** ([@novikov-alexander](https://github.com/novikov-alexander)), **Marvin Eisenberger** ([@marvin-eisenberger](https://github.com/marvin-eisenberger)), **Emilien Dupont** ([@EmilienDupont](https://github.com/EmilienDupont)), **Po-Sen Huang**, **Adam Zsolt Wagner** ([@zawagner22](https://github.com/zawagner22)), **Sergey Shirobokov**, **Borislav Kozlovskii**, **Francisco Ruiz** ([@franrruiz](https://github.com/franrruiz)), **Abbas Mehrabian**, **M. Pawan Kumar**, **Abigail See** ([@abisee](https://github.com/abisee)), **Swarat Chaudhuri** ([@swarat](https://github.com/swarat)), **George Holland**, **Alex Davies**, **Sebastian Nowozin** ([@nowozin](https://github.com/nowozin)), **Pushmeet Kohli**, **Matej Balog**.
 
 ---
-*Curated, architected, and field-tested in production by **Anat Lerner** ([@AnatAdapaAi](https://github.com/AnatAdapaAi)).*
+*Curated, architected, and field-tested in production by **Anat Lerner** ([@AnatEnterprise AI](https://github.com/AnatEnterprise AI)).*
+
+## Model Armor Inline Defense & Tiered Placement Guide
+
+We integrate Google Cloud **Model Armor** (`skills/model-armor-inline-defense.SKILL.md`) across our agentic
+interaction paths (Agent Runtime, Gemini Enterprise, MCP servers, Apigee, and Load Balancers) without modifying
+application code. To balance zero-trust security with FinOps efficiency ($0 for the first 2M tokens/month,
+$0.10/1M tokens thereafter) and zero engineering friction, we deploy Model Armor using a **3-Tier Placement
+Strategy**:
+
+1. **Tier 1 - Untrusted External Ingestion (Enforce Input Shield):**
+   We attach `untrusted-input-shield` (Prompt Injection, Jailbreak, Malicious URL, and PDF/Document scanning)
+   to all agents that read external data sources - including web research, customer support, sales, email,
+   calendar, and third-party MCP tools.
+2. **Tier 2 - Sensitive Egress & Compliance (Enforce PII/SDP Shield):**
+   We attach `sensitive-egress-sdp-shield` (Sensitive Data Protection PII redaction and high-confidence
+   jailbreak filtering) to legal, finance, HR, and executive reporting agents so sensitive records are redacted
+   inline before leaving the runtime.
+3. **Tier 3 - Trusted Internal Code & Security Sandboxes (Bypass / Inspect-Only):**
+   We intentionally bypass inline content blocking on internal software engineering (Rust, Wasm, Python),
+   cryptography, and security auditing agents. Because engineering agents routinely analyze exploit patterns,
+   stack traces, and security test payloads, bypassing content filters prevents false-positive blocks and
+   preserves our monthly token quota for true untrusted perimeters.
